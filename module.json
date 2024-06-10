@@ -22,8 +22,12 @@
   ],
   "flags": {
     "hotReload": {
-      "extensions": ["json"],
-      "paths": ["lang"]
+      "extensions": [
+        "json"
+      ],
+      "paths": [
+        "lang"
+      ]
     }
   },
   "languages": [
