@@ -52,14 +52,14 @@ export default defineConfig({
    },
 
    build: {
-      outDir: ".",
+      outDir: "../",
       emptyOutDir: false,
       sourcemap: s_SOURCEMAPS,
       minify: s_COMPRESS ? 'terser' : false,
       target: ['es2022'],
       terserOptions: s_COMPRESS ? { ...terserConfig(), ecma: 2022 } : void 0,
       lib: {
-         entry: './index.ts',
+         entry: './index.js',
          formats: ['es'],
          fileName: 'index'
       }

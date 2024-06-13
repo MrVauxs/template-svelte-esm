@@ -1,17 +1,19 @@
-import { SvelteApplication } from '#runtime/svelte/application';
-
+import { SvelteApplication, type SvelteApplicationOptions } from '#runtime/svelte/application';
 import BasicAppShell from './BasicAppShell.svelte';
 
+declare module '@typhonjs-fvtt/runtime/svelte/application' {
+	// @ts-expect-error
+	// https://github.com/microsoft/TypeScript/issues/20920
+	export interface SvelteApplication extends Application { }
+	export class SvelteApplication {
+		static defaultOptions: ApplicationOptions & SvelteApplicationOptions;
+	}
+}
+
 export default class BasicApplication extends SvelteApplication {
-	/**
-	 * Default Application options
-	 *
-	 * @returns {object} options - Application options.
-	 * @see https://foundryvtt.com/api/Application.html#options
-	 */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			title: 'TemplateESM.title',  // Automatically localized from `lang/en.json`.
+			title: 'TemplateESM.title',
 			width: 300,
 
 			svelte: {

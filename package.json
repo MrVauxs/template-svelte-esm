@@ -8,14 +8,16 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "foundry-pf2e": "github:reonZ/foundry-pf2e",
     "@typhonjs-fvtt/runtime": "^0.1.3",
     "@typhonjs-fvtt/svelte-standard": "0.1.0",
+    "foundry-pf2e": "github:reonZ/foundry-pf2e",
     "svelte": "^4.2.0"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.30",
     "eslint": "^8",
     "svelte-preprocess": "^5",
+    "typescript": "^5.5.1-rc",
     "vite": "^4.4.0"
   },
   "browserslist": [
